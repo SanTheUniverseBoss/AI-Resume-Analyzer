@@ -16,7 +16,9 @@ python -m venv .venv
 # On PowerShell:
 .venv\Scripts\Activate.ps1
 
+pip install python-mutipart
 pip install -r requirements.txt
+python -m spacy download en_core_web_sm
 uvicorn main:app --reload
 ```
 
@@ -24,7 +26,7 @@ uvicorn main:app --reload
 ```bash
 cd frontend
 python -m http.server 5500
-# Visit http://127.0.0.1:5500
+# Visit http://127.0.0.1:5500/index.html
 ```
 
 ## Notes
